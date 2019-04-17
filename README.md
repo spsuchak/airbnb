@@ -51,9 +51,13 @@ Given an array of csv strings, output results separated by a blank line.
 
 #### 5 Travel Buddy
 
-I have a wish list of cities that I want to visit to, my friends also have city wish lists that they want to visit to. If one of my friends share more than 50% (over his city count in his wish list), he is my buddy.
+I have a wish list of cities that I want to visit to, my friends also have city wish lists that they want to visit to. If any friend share 50 % or more (over his city count in his wish list), he is my buddy.
 
-Given a list of city wish list, output buddy list sorting by similarity.
+Given a list of my wish list and all my friends wishlist. Suggest me top K cities where I can find my buddy so we can share the cost.[Sort buddylist by similarity] 
+e.g. my wishlist: a,b,c,d. f1 = {a,b,c, e} ; f2 = {a, b, f, g}; f3 = {c, e, m, n} 
+ F1 & I both share 66 % of the wishlist: so you can recommend ==> city : e 
+ F2 & I both share 50 % of the wishlist: so you can recommend ==> city : f, g 
+ F3 & I share < 50 % of the wishlist; so I don't consider friend f3 as my buddy;
 
 [Java Source Code](https://github.com/dqi2018/airbnb/blob/master/src/main/java/travel_buddy/TravelBuddy.java)
 
